@@ -8,5 +8,6 @@
   .header-bar {
     background-color: #222;
     color: #eee;
+    padding: 4px;
   }
 </style>

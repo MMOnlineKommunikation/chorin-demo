@@ -33,6 +33,7 @@ html {
 .layout {
   display: flex;
   height: 100vh;
+  width: 100vw;
   flex-direction: column;
   justify-content: flex-end;
 }
