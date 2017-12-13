@@ -10,12 +10,16 @@ const createStore = () => {
         {
           messbild: '/Stein_E_Lage.jpg',
           detailStein: '/Stein_E_Inschrift.jpg',
-          previewStein: 'background-image: url(/stein_E_Inschrift.jpg)'
+          previewStein: 'background-image: url(/stein_E_Inschrift.jpg)',
+          titelStein: 'Titel Stein E',
+          textStein: 'Text Stein E'
         },
         {
           messbild: '/Stein_F_Lage.jpg',
           detailStein: '/Stein_F_Inschrift.jpg',
-          previewStein: 'background-image: url(/stein_F_Inschrift.jpg)'
+          previewStein: 'background-image: url(/stein_F_Inschrift.jpg)',
+          titelStein: 'Titel Stein F',
+          textStein: 'Text Stein F'
         }
       ],
       steinIndex: 0,
@@ -29,19 +33,19 @@ const createStore = () => {
     },
     getters: {
       getMediaDisplayBG (state) {
-        if (state.modus === 'auswahl') {
-          return state.backsteine[state.steinIndex].previewStein
-        }
-        // BUG -- WEITER
-        if (state.modus === 'detail') {
-          return ''
-        }
+        return state.backsteine[state.steinIndex].previewStein
       },
       getMessbild (state) {
         return state.backsteine[state.steinIndex].messbild
       },
       getDetailStein (state) {
         return state.backsteine[state.steinIndex].detailStein
+      },
+      getTitelStein (state) {
+        return state.backsteine[state.steinIndex].titelStein
+      },
+      getTextStein (state) {
+        return state.backsteine[state.steinIndex].textStein
       },
       getModus (state) {
         return state.modus

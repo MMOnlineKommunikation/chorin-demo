@@ -1,6 +1,6 @@
 <template>
   <div class="info-section">
-    Info-Section
+    Info-Section Steine
   </div>
 </template>
 <script>
