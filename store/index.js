@@ -10,12 +10,24 @@ const createStore = () => {
         {
           messbild: '/Stein_E_Lage.jpg',
           detailStein: '/Stein_E_Inschrift.jpg',
-          previewStein: 'background-image: url(/stein_E_Inschrift.jpg)'
+          previewStein: 'background-image: url(/stein_E_Inschrift.jpg)',
+          titelStein: 'Titel Stein E',
+          textStein: 'Text Stein E',
+          planPos: {
+            x: 50,
+            y: 96
+          }
         },
         {
           messbild: '/Stein_F_Lage.jpg',
           detailStein: '/Stein_F_Inschrift.jpg',
-          previewStein: 'background-image: url(/stein_F_Inschrift.jpg)'
+          previewStein: 'background-image: url(/stein_F_Inschrift.jpg)',
+          titelStein: 'Titel Stein F',
+          textStein: 'Text Stein F',
+          planPos: {
+            x: 215,
+            y: 196
+          }
         }
       ],
       steinIndex: 0,
@@ -28,14 +40,11 @@ const createStore = () => {
       errors: []
     },
     getters: {
+      getBacksteine (state) {
+        return state.backsteine
+      },
       getMediaDisplayBG (state) {
-        if (state.modus === 'auswahl') {
-          return state.backsteine[state.steinIndex].previewStein
-        }
-        // BUG -- WEITER
-        if (state.modus === 'detail') {
-          return ''
-        }
+        return state.backsteine[state.steinIndex].previewStein
       },
       getMessbild (state) {
         return state.backsteine[state.steinIndex].messbild
@@ -43,8 +52,14 @@ const createStore = () => {
       getDetailStein (state) {
         return state.backsteine[state.steinIndex].detailStein
       },
-      getModus (state) {
-        return state.modus
+      getTitelStein (state) {
+        return state.backsteine[state.steinIndex].titelStein
+      },
+      getTextStein (state) {
+        return state.backsteine[state.steinIndex].textStein
+      },
+      getPlanPos (state) {
+        return state.backsteine[state.steinIndex].planPos
       },
       getStein (state) {
         return state.steinAktuell
