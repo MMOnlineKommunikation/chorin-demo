@@ -6,10 +6,19 @@ const createStore = () => {
     state: {
       // neu
       modus: 'auswahl',
+      backsteine: [
+        {
+          messbild: '/Stein_E_Lage.jpg',
+          detailStein: '/Stein_E_Inschrift.jpg',
+          previewStein: 'background-image: url(/stein_E_Inschrift.jpg)'
+        },
+        {
+          messbild: '/Stein_F_Lage.jpg',
+          detailStein: '/Stein_F_Inschrift.jpg',
+          previewStein: 'background-image: url(/stein_F_Inschrift.jpg)'
+        }
+      ],
       steinIndex: 0,
-      messbilder: ['/Stein_E_Lage.jpg', '/Stein_F_Lage.jpg'],
-      detailSteine: ['/Stein_E_Inschrift.jpg', '/Stein_F_Inschrift.jpg'],
-      previewSteine: ['background-image: url(/stein_E_Inschrift.jpg)', 'background-image: url(/stein_F_Inschrift.jpg)'],
       // Import
       counter: 0,
       test: {},
@@ -21,12 +30,21 @@ const createStore = () => {
     getters: {
       getMediaDisplayBG (state) {
         if (state.modus === 'auswahl') {
-          return state.previewSteine[state.steinIndex]
+          return state.backsteine[state.steinIndex].previewStein
         }
         // BUG -- WEITER
         if (state.modus === 'detail') {
           return ''
         }
+      },
+      getMessbild (state) {
+        return state.backsteine[state.steinIndex].messbild
+      },
+      getDetailStein (state) {
+        return state.backsteine[state.steinIndex].detailStein
+      },
+      getModus (state) {
+        return state.modus
       },
       getStein (state) {
         return state.steinAktuell
@@ -40,7 +58,7 @@ const createStore = () => {
         state.counter += payload
       },
       changeSteinIndex (state, payload) {
-        const max = state.messbilder.length
+        const max = state.backsteine.length
         let steinIndexNeu = state.steinIndex + payload
         if (steinIndexNeu >= max) {
           steinIndexNeu = 0
@@ -49,9 +67,6 @@ const createStore = () => {
           steinIndexNeu = max - 1
         }
         state.steinIndex = steinIndexNeu
-      },
-      changeModus (state, payload) {
-        state.modus = payload
       },
       setStein (state, payload) {
         state.steinAktuell = state.steine[payload]
@@ -72,9 +87,6 @@ const createStore = () => {
       },
       changeSteinIndex (context, payload) {
         context.commit('changeSteinIndex', payload)
-      },
-      changeModus (context, payload) {
-        context.commit('changeModus', payload)
       },
       setStein (context, payload) {
         context.commit('setStein', payload)
