@@ -1,6 +1,6 @@
 <template>
-  <div class="media-display" :style="getMediaDisplayBG">
-      <img v-if="$store.state.modus === 'auswahl'"  :src="getMessbild" class="stein-lage">
+  <div class="media-display">
+      <img :src="getDetailStein" class="stein-detail">
   </div>
 </template>
 
@@ -38,7 +38,7 @@
    left: 50%;
    transform: translate(-50%, -50%);
  }
- .stein-lage {
+ .stein-detail {
    border: 2px solid #fff;
  }
 

@@ -1,20 +1,20 @@
 <template>
   <div class="wrapper">
-    <media-display-steine />
-    <controls-bar-steine />
+    <media-display-stein />
+    <controls-bar-stein />
     <info-section />
   </div>
 </template>
 
 <script>
-import ControlsBarSteine from '~/components/Controls-Bar-Steine.vue'
-import MediaDisplaySteine from '~/components/Media-Display.vue'
+import ControlsBarStein from '~/components/Controls-Bar-Stein.vue'
+import MediaDisplayStein from '~/components/Media-Display-Stein.vue'
 import InfoSection from '~/components/Info-Section.vue'
 
 export default {
   components: {
-    ControlsBarSteine,
-    MediaDisplaySteine,
+    ControlsBarStein,
+    MediaDisplayStein,
     InfoSection
   }
 }
