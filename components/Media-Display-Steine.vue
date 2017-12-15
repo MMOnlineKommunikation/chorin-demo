@@ -1,6 +1,6 @@
 <template>
   <div class="media-display" :style="getMediaDisplayBG">
-      <img v-if="$store.state.modus === 'auswahl'"  :src="getMessbild" class="stein-lage">
+      <img :src="getMessbild" class="stein-lage">
   </div>
 </template>
 

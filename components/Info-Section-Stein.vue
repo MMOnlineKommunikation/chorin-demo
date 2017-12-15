@@ -1,5 +1,5 @@
 <template>
-  <div class="info-section">
+  <div class="info-section-stein">
     <h1>{{ getTitelStein }}</h1>
     <div>{{ getTextStein }}</div>
   </div>
@@ -17,7 +17,8 @@ export default {
 }
 </script>
 <style>
-  .info-section {
-    flex: 1;
-  }
+.info-section-stein {
+  position: relative;
+  flex: 1;
+}
 </style>
