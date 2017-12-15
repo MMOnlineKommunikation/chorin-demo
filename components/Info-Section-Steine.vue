@@ -1,5 +1,5 @@
 <template>
-  <div class="info-section">
+  <div class="info-section-steine">
     <div v-for="(backstein, index) in getBacksteine" class="marker" :style="positionMarker(index)"><i class="material-icons">crop_7_5</i></div>
   </div>
   </div>
@@ -38,7 +38,7 @@
   }
 </script>
 <style>
-  .info-section {
+  .info-section-steine {
     position: relative;
     flex: 1;
     background-image: url('/GR_01.jpg');
