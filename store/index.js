@@ -5,7 +5,29 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       // neu
-      modus: 'auswahl',
+      themen: [
+        {
+          themaTitel: 'Botschaften des Glaubens',
+          themaAbstract: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+          themaDarstellung: ''
+        },
+        {
+          themaTitel: 'Magische Steine - Dämonenabwehr',
+          themaAbstract: 'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.',
+          themaDarstellung: ''
+        },
+        {
+          themaTitel: 'Bauzeichen',
+          themaAbstract: 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.',
+          themaDarstellung: ''
+        },
+        {
+          themaTitel: 'Spuren des Alltags',
+          themaAbstract: 't accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore.',
+          themaDarstellung: ''
+        }
+      ],
+      themaIndex: 0,
       backsteine: [
         {
           messbild: '/Stein_E_Lage.jpg',
@@ -61,6 +83,18 @@ const createStore = () => {
       getPlanPos (state) {
         return state.backsteine[state.steinIndex].planPos
       },
+      getThemen (state) {
+        return state.themen
+      },
+      getThemaId (state) {
+        return function (id) {
+          return state.themen[id]
+        }
+      },
+      getThemaIndex (state) {
+        return state.themen[state.themaIndex]
+      },
+      // Alt
       getStein (state) {
         return state.steinAktuell
       },
