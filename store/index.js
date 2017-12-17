@@ -86,6 +86,9 @@ const createStore = () => {
       getThemen (state) {
         return state.themen
       },
+      getThema (state) {
+        return state.themen[state.themaIndex]
+      },
       getThemaId (state) {
         return function (id) {
           return state.themen[id]
@@ -103,6 +106,9 @@ const createStore = () => {
       }
     },
     mutations: {
+      changeThema (state, payload) {
+        state.themaIndex = payload
+      },
       changeCounter (state, payload) {
         state.counter += payload
       },
@@ -131,6 +137,9 @@ const createStore = () => {
       }
     },
     actions: {
+      changeThema (context, payload) {
+        context.commit('changeThema', payload)
+      },
       changeCounter (context, payload) {
         context.commit('changeCounter', payload)
       },

@@ -39,7 +39,8 @@
    transform: translate(-50%, -50%);
  }
  .stein-lage {
-   border: 2px solid #fff;
+   border-left: 1px solid #fff;
+   border-right: 1px solid #fff;
  }
 
 </style>

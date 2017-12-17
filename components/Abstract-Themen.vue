@@ -1,7 +1,7 @@
 <template>
   <div class="abstract-themen">
-      <h1>{{ getThemaId(0).themaTitel }}</h1>
-      <div>{{ getThemaId(0).themaAbstract }}</div>
+      <h1>{{ getThema.themaTitel }}</h1>
+      <div>{{ getThema.themaAbstract }}</div>
   </div>
 </template>
 
@@ -17,7 +17,8 @@
     computed: {
       ...mapGetters([
         'getThemaId',
-        'getThemaIndex'
+        'getThemaIndex',
+        'getThema'
       ])
     }
   }
@@ -25,5 +26,6 @@
 <style>
  .abstract-themen {
    flex: 1;
+   padding: 1rem;
  }
 </style>
