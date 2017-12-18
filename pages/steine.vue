@@ -8,7 +8,7 @@
 
 <script>
 import ControlsBarSteine from '~/components/Controls-Bar-Steine.vue'
-import MediaDisplaySteine from '~/components/Media-Display.vue'
+import MediaDisplaySteine from '~/components/Media-Display-Steine.vue'
 import InfoSectionSteine from '~/components/Info-Section-Steine.vue'
 
 export default {
@@ -22,18 +22,9 @@ export default {
 
 <style scoped>
 .wrapper {
-  background-color: lightgrey;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   flex: 1;
-}
-.container {
-
-}
-.illu {
-  min-height: 50vh;
-}
-.info {
-  min-height: 40vh;
 }
 </style>

@@ -1,6 +1,9 @@
 <template>
   <div class="media-display">
+    <div class="img-container">
       <img :src="getDetailStein" class="stein-detail">
+      <i class="material-icons zoom">zoom_in</i>
+    </div>
   </div>
 </template>
 
@@ -37,6 +40,13 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+ }
+ .zoom {
+   display: block;
+   position: absolute;
+   bottom: 4px;
+   right: 4px;
+   font-size: 1.8rem;
  }
  .stein-detail {
    border: 2px solid #fff;

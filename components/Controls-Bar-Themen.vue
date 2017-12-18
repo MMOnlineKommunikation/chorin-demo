@@ -1,14 +1,14 @@
 <template>
   <div class="controls-bar">
     <div class="cb-corpus">
-      <span  class="cb-element"@click="$store.dispatch('changeSteinIndex', -1)"><i class="material-icons">keyboard_arrow_left</i></span>
+      <span  class="cb-element" @click="$store.dispatch('changeSteinIndex', -1)"> </span>
       <nuxt-link class="cb-element" to="/steine">
         <div class="cb-button">
           <img src="/GR_icon.png" class="cb-button-element"/>
-          <span class="cb-button-element btn-text">Steine auswählen</span>
+          <span class="cb-button-element btn-text">Tour zu diesem Thema beginnen</span>
         </div>
       </nuxt-link>
-      <span class="cb-element" @click="$store.dispatch('changeSteinIndex', 1)"><i class="material-icons">keyboard_arrow_right</i></span>
+      <span class="cb-element" @click="$store.dispatch('changeSteinIndex', 1)"> </span>
     </div><!-- .cb-corpus -->
   </div>
 </template>
@@ -67,4 +67,5 @@ export default {
     display: block;
     margin-top: .2rem;
   }
+
 </style>

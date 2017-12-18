@@ -1,65 +1,59 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        nuxt-chorin
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
-      <div class="butons-container">
-        <button @click="$store.dispatch('changeCounter', 1)">Counter rauf</button>
-        <button @click="$store.dispatch('changeCounter', -1)">Counter runter</button>
-      </div>
-      <div class="ausgabe">
-        Counter: {{$store.state.counter}}
-      </div>
+  <section class="container start">
+    <div class="title">
+      <h1>Sprechende Steine</h1>
+      <h2>Ein Führer<br>zu den Inschriften an der<br>Choriner Klosterkirche</h2>
+    </div>
+    <div class="enter-button">
+      Führung beginnen!
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
   components: {
-    Logo
-  }
+
+  },
+  layout: 'start'
 }
 </script>
 
 <style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+  .container {
+    background-color: transparent;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.6rem;
+  }
+  .start h1 {
+    font-size: 1.8rem;
+    letter-spacing: .05rem;
+    color: #A11823;
+    margin-top: 6.6rem;
+    margin-bottom: .6rem;
+    text-transform: uppercase;
+  }
+  .start h2 {
+    font-size: 1.4rem;
+    color: #A11823;
+  }
+  .title {
+    padding-bottom: 0rem; /*setzt den Titel aus der Mitte nach oben */
+  }
+  .enter-button {
+    margin-top: 2.8rem;
+    background-color: #A11823;
+    color: #fff;
+    padding: .8rem;
+    border: 0px solid #333;
+  }
+  .links {
+    padding-top: 15px;
+  }
 </style>
