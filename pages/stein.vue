@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  background-color: lightgrey;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   flex: 1;

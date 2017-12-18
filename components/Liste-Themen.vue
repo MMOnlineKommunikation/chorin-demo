@@ -40,4 +40,8 @@ export default {
     font-size: .85rem;
     font-weight: 400;
   }
+  .liste-themen div:nth-of-type(1) {
+    background-color: #A11823;
+    color: #fff;
+  }
 </style>

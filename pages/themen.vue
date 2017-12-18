@@ -1,19 +1,19 @@
 <template>
   <div class="wrapper">
     <abstract-themen />
-    <controls-bar-steine />
+    <controls-bar-themen />
     <liste-themen />
   </div>
 </template>
 
 <script>
-import ControlsBarSteine from '~/components/Controls-Bar-Steine.vue'
+import ControlsBarThemen from '~/components/Controls-Bar-Themen.vue'
 import AbstractThemen from '~/components/Abstract-Themen.vue'
 import ListeThemen from '~/components/Liste-Themen.vue'
 
 export default {
   components: {
-    ControlsBarSteine,
+    ControlsBarThemen,
     AbstractThemen,
     ListeThemen
   }
@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
   .wrapper {
-    background-color: lightgrey;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     flex: 1;
